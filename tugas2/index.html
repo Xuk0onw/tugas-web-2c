@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catatan Belajar &mdash; Jurnal Membuat Website</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <h1 class="site-title">Catatan Belajar</h1>
+      <p class="site-tagline">Jurnal harian belajar</p>
+    </div>
+
+    <nav>
+      <div class="wrap">
+        <a href="#beranda">Beranda</a>
+        <a href="#artikel">Artikel</a>
+        <a href="#tentang">Tentang Saya</a>
+        <a class="profil-link" href="https://www.dicoding.com/users/adit_berka68b3/academies" target="_blank" rel="noopener">
+          Profil Dicoding Saya
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page" id="beranda">
+
+    <div id="content">
+
+      <article>
+        <div class="meta">
+          <span>12 September 2026</span>
+          <span>&middot;</span>
+          <span>HTML &amp; CSS</span>
+        </div>
+        <h2><a href="#">Mengenal Elemen Semantik HTML5</a></h2>
+        <p>
+          Minggu ini saya belajar bahwa membangun halaman bukan cuma soal
+          <code>&lt;div&gt;</code> di mana-mana. Elemen seperti
+          <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>,
+          <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>,
+          <code>&lt;aside&gt;</code>, dan <code>&lt;footer&gt;</code> memberi
+          makna pada setiap bagian halaman, bukan sekadar kotak kosong.
+          Browser dan pembaca layar jadi lebih mudah memahami struktur
+          konten, dan kode pun lebih mudah dibaca oleh saya sendiri enam
+          bulan dari sekarang.
+        </p>
+        <p>
+          Yang paling terasa manfaatnya adalah <code>&lt;article&gt;</code>:
+          setiap tulisan berdiri sebagai satu unit konten yang bisa dipahami
+          sendiri, terlepas dari halaman tempat ia ditampilkan.
+        </p>
+      </article>
+
+      <article>
+        <div class="meta">
+          <span>8 September 2026</span>
+          <span>&middot;</span>
+          <span>Layout</span>
+        </div>
+        <h2><a href="#">Pindah dari Float ke Flexbox</a></h2>
+        <p>
+          Dulu saya menyusun kolom halaman pakai <code>float</code>, dan
+          hasilnya sering berantakan&mdash;elemen induk kehilangan tinggi,
+          lalu harus ditambal dengan trik <em>clearfix</em>. Setelah mencoba
+          <code>display: flex</code>, semua terasa lebih masuk akal:
+          tinggal atur arah (<code>row</code> atau <code>column</code>),
+          jarak antar elemen dengan <code>gap</code>, dan bagaimana ruang
+          kosong dibagi dengan <code>flex-grow</code>.
+        </p>
+        <p>
+          Halaman ini sendiri disusun penuh dengan flexbox: header, navigasi,
+          area utama berdampingan dengan sidebar, sampai footer di bagian
+          bawah.
+        </p>
+      </article>
+
+      <article>
+        <div class="meta">
+          <span>2 September 2026</span>
+          <span>&middot;</span>
+          <span>Refleksi</span>
+        </div>
+        <h2><a href="#">Kenapa Saya Menulis Jurnal Belajar</a></h2>
+        <p>
+          Menulis ulang apa yang baru dipelajari memaksa saya untuk benar-benar
+          memahaminya, bukan sekadar meniru kode dari tutorial. Setiap
+          tulisan di sini adalah catatan kecil yang, semoga, juga berguna
+          bagi siapa pun yang sedang berada di tahap belajar yang sama.
+        </p>
+      </article>
+
+      <article>
+        <div class="meta">
+          <span>2 juni 2026</span>
+          <span>&middot;</span>
+          <span>Tooling</span>
+        </div>
+        <h2><a href="#">Mencoba Nix untuk Environment yang Konsisten</a></h2>
+        <p>
+          Selama ini saya sering pusing setiap install ulang operasi sistem: versi Node
+          beda, dependensi hilang, konfigurasi harus diatur ulang dari nol.
+          Minggu ini saya coba <code>Nix</code>, package manager yang
+          mendeklarasikan seluruh environment lewat satu berkas konfigurasi,
+          bukan diinstal manual satu per satu. Idenya: environment jadi bisa
+          direproduksi persis sama, di komputer mana pun, tinggal jalankan
+          satu perintah.
+        </p>
+        <p>
+          Belum semua konsepnya saya pahami—terutama soal <em>flakes</em>
+          dan bagaimana Nix mengelola dependensi secara terisolasi—tapi
+          sejauh ini terasa seperti cara berpikir baru soal reproducibility
+          yang layak dipelajari lebih dalam.
+        </p>
+      </article>
+
+    </div>
+
+    <aside id="tentang">
+      <div class="profile-photo">
+        <img src="images/profile.jpg" alt="Ilustrasi foto profil penulis jurnal">
+      </div>
+      <p class="name">Khorin Berka Aditya</p>
+      <p class="role">Web Developer pemula</p>
+      <p class="bio">
+        baru belajar membangun website dari dasar sambil mendokumentasikan
+        prosesnya di jurnal ini. Tertarik pada HTML, CSS, dan hal-hal kecil
+        yang membuat sebuah halaman terasa rapi dan mudah dipakai.
+      </p>
+      <h2>Sedang Dipelajari</h2>
+      <ul class="skills">
+        <li>HTML</li>
+        <li>CSS Flexbox</li>
+        <li>Aksesibilitas</li>
+        <li>python</li>
+        <li>Nix</li>
+      </ul>
+    </aside>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <p>&copy; 2026 Dibuat sebagai pengumpulan tugas  kelas Dicoding.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
