@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --bg: #0D1117;
+  --surface: #161B22;
+  --surface-2: #21262D;
+  --text: #C9D1D9;
+  --text-muted: #8B949E;
+  --border: #30363D;
+  --accent: #58A6FF;
+  --accent-2: #FFFFFF;
+  --max-width: 1040px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Source Serif 4', serif;
+  line-height: 1.2;
+  margin: 0 0 0.5em 0;
+  color: #F0F6FC;
+}
+
+p {
+  margin: 0 0 1em 0;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus-visible {
+  text-decoration: underline;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ===== Header & Nav (flexbox) ===== */
+
+header {
+  background: var(--surface);
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 32px 24px 20px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.site-title {
+  font-size: 2rem;
+  color: #F0F6FC;
+}
+
+.site-tagline {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+nav {
+  background: var(--surface-2);
+  border-top: 1px solid var(--border);
+}
+
+nav .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+nav a {
+  display: inline-block;
+  padding: 14px 16px;
+  color: var(--text);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  background: rgba(240,246,252,0.06);
+  text-decoration: none;
+}
+
+nav a.profil-link {
+  margin-left: auto;
+  color: var(--accent-2);
+}
+
+/* ===== Page layout (flexbox, no float) ===== */
+
+.page {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 40px 24px 64px;
+  align-items: flex-start;
+}
+
+#content {
+  flex: 3 1 480px;
+  min-width: 0;
+}
+
+aside {
+  flex: 1 1 260px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 28px;
+}
+
+/* ===== Articles ===== */
+
+article {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 32px;
+  margin-bottom: 32px;
+}
+
+article:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+article .meta {
+  display: flex;
+  gap: 12px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+
+article h2 {
+  font-size: 1.5rem;
+}
+
+article h2 a {
+  color: #F0F6FC;
+}
+
+article h2 a:hover,
+article h2 a:focus-visible {
+  color: var(--accent);
+}
+
+/* ===== Aside / profile card ===== */
+
+aside h2 {
+  font-size: 1.15rem;
+  margin-bottom: 16px;
+}
+
+.profile-photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 20px;
+  border: 3px solid var(--accent-2);
+}
+
+.profile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+aside .name {
+  text-align: center;
+  font-weight: 600;
+  color: #F0F6FC;
+  margin-bottom: 4px;
+}
+
+aside .role {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+}
+
+aside .bio {
+  font-size: 0.95rem;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.skills li {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 0.8rem;
+}
+
+/* ===== Footer (flexbox) ===== */
+
+footer {
+  background: var(--surface);
+  color: var(--text-muted);
+  border-top: 1px solid var(--border);
+}
+
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 28px 24px;
+  font-size: 0.9rem;
+}
+
+.footer-inner a {
+  color: var(--accent);
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width: 680px) {
+  .site-title {
+    font-size: 1.6rem;
+  }
+
+  nav a.profil-link {
+    margin-left: 0;
+  }
+
+  .page {
+    padding-top: 28px;
+  }
+}
